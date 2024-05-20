@@ -1,447 +1,504 @@
 @font-face {
-    font-family: rage;
-    src: url(font/Rage\ Italic\ Regular.ttf);
+  font-family:rage;
+  src:url(font/Rage\ Italic\ Regular.ttf);
 }
 @font-face {
-  font-family: limelight;
-  src: url(font/Limelight-Regular.ttf);
+  font-family:limelight;
+  src:url(font/Limelight-Regular.ttf);
 }
 @import url('https://fonts.googleapis.com/css?family=Rage+Italic');
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 8px; /* Thin scrollbar */
+  /* Scrollbar styles */::-webkit-scrollbar {
+  width:8px;
+  /* Thin scrollbar */
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #000000; /* Match with your page color */
+/* Track */::-webkit-scrollbar-track {
+  background:#000000;
+  /* Match with your page color */
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #04C3FF /* Match with your page color */
+/* Handle */::-webkit-scrollbar-thumb {
+  background:#04C3FF /* Match with your page color */
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #414040;
+/* Handle on hover */::-webkit-scrollbar-thumb:hover {
+  background:#414040;
 }
-
 /* Auto-hide feature (for Webkit browsers) */
 body {
-  -webkit-animation: fadeOutScrollbar 2s forwards;
-  animation: fadeOutScrollbar 2s forwards;
+  -webkit-animation:fadeOutScrollbar 2s forwards;
+  animation:fadeOutScrollbar 2s forwards;
 }
-
 @-webkit-keyframes fadeOutScrollbar {
   to {
-      scrollbar-color: transparent transparent; /* Make scrollbar transparent */
-  }
+  scrollbar-color:transparent transparent;
+  /* Make scrollbar transparent */
 }
-
-@keyframes fadeOutScrollbar {
+}@keyframes fadeOutScrollbar {
   to {
-      scrollbar-color: transparent transparent; /* Make scrollbar transparent */
-  }
+  scrollbar-color:transparent transparent;
+  /* Make scrollbar transparent */
 }
-
-.poetsen-one-regular {
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+}.poetsen-one-regular {
+  font-family:"Poetsen One",sans-serif;
+  font-weight:400;
+  font-style:normal;
 }
-body { 
-    background-color: #000000; /* Solid color fallback for older browsers */
-  background-image: linear-gradient(180deg, #000000 0%, #2f2f2f 50%, #8e8e8e 100%);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 60px; 
+body {
+  background-color:#000000;
+  /* Solid color fallback for older browsers */
+  background-image:linear-gradient(180deg,#000000 0%,#2f2f2f 50%,#8e8e8e 100%);
+  font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  padding-top:60px;
 }
-  .navbar { 
-    display: flex;
-    justify-content: center; /* Aligns items horizontally to the center */
-    align-items: center; /* Aligns items vertically to the center */
-    overflow: hidden;
-    background-color: #000000;
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
- }
- 
- .navbar a:not(:first-child) {
-    margin-left: auto; /* Push all items except the first one to the right */
-  }
-  
-  /* Add custom styles for the first link (Introduction) */
+.navbar .icon {
+  display: none;
+}
+.navbar {
+  display:flex;
+  justify-content:center;
+  /* Aligns items horizontally to the center */
+    align-items:center;
+  /* Aligns items vertically to the center */
+    overflow:hidden;
+  background-color:#000000;
+  width:100%;
+  margin:0;
+  padding:0;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+}
+.navbar a:not(:first-child) {
+  margin-left:auto;
+  /* Push all items except the first one to the right */
+}
+/* Add custom styles for the first link (Introduction) */
   .navbar a:first-child {
-    margin-right: auto; /* Push the first item to the left */
-  }
-  .navbar a {
-    float: left; 
-    display: block; 
-    color: #f2f2f2; 
-    text-align: center; 
-    padding: 14px 16px; 
-    text-decoration: none; }
-  .section { 
-    padding: 80px;
- }
-  .circle-img { 
-    border-radius: 50%; 
-    width: 250px; 
-    height: 250px;
-    margin-top: 2px; /* Adjust this value as needed */
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
- }
- .circle-imgg { 
-  border-radius: 50%; 
-  width: 250px; 
-  height: 250px;
-  margin-top: 2px; /* Adjust this value as needed */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+  margin-right:auto;
+  /* Push the first item to the left */
 }
-  .zig-zag { 
-    display: flex; 
-    flex-wrap: wrap;
- }
-  .zig-zag > div { 
-    flex: 50%; 
-    padding: 5px; 
-    box-sizing: border-box;
- }
-  .zig-zag > div:nth-child(odd) { 
-    padding-right: 20px;
- }
-  .zig-zag > div:nth-child(even) { 
-    padding-left: 20px;
- }
- .video-background {
-    position: relative;
-    overflow: hidden;
-  }
-  #introduction {
-    margin-top: -20px; /* You can adjust this value as needed */
-  }
-  .video-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    width: auto;
-    height: auto;
-    z-index: -1;
-  }
-  
-  .content {
-    position: relative;
-    z-index: 1;
-    /* Add your styling for content here */
-  }
-  .section {
-    margin-left: -50px;
-    font-size: 20px;
-    font-family: limelight;
-    padding-top: 40px;
-    height: 400px; /* Increase the height as needed */
-  }
- /* Add this to your styles.css file */
+.navbar a {
+  float:left;
+  display:block;
+  color:#f2f2f2;
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none;
+}
+.section {
+  padding:80px;
+}
+.circle-img {
+  border-radius:50%;
+  width:250px;
+  height:250px;
+  margin-top:2px;
+  /* Adjust this value as needed */
+    transition:box-shadow 0.3s ease-in-out;
+  /* Smooth transition */
+}
+.circle-imgg {
+  border-radius:50%;
+  width:250px;
+  height:250px;
+  margin-top:2px;
+  /* Adjust this value as needed */
+  transition:box-shadow 0.3s ease-in-out;
+  /* Smooth transition */
+}
+.zig-zag {
+  display:flex;
+  flex-wrap:wrap;
+}
+.zig-zag > div {
+  flex:50%;
+  padding:5px;
+  box-sizing:border-box;
+}
+.zig-zag > div:nth-child(odd) {
+  padding-right:20px;
+}
+.zig-zag > div:nth-child(even) {
+  padding-left:20px;
+}
+.video-background {
+  position:relative;
+  overflow:hidden;
+}
+#introduction {
+  margin-top:-20px;
+  /* You can adjust this value as needed */
+}
+.video-fill {
+  position:absolute;
+  top:0;
+  left:0;
+  min-width:100%;
+  min-height:100%;
+  object-fit:cover;
+  width:auto;
+  height:auto;
+  z-index:-1;
+}
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
-    text-align: center; /* Center text */
-  }
-  
-  .pfp {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    margin-top: 5px; /* Adjust this value to create space between the navbar and the profile picture */
-  }
-
-  .op {
-    border-radius: 50%; 
-    width: 200px; 
-    height: 200px;
-    float: right;
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+  position:relative;
+  z-index:1;
+  /* Add your styling for content here */
 }
-
+.section {
+  margin-left:-50px;
+  font-size:20px;
+  font-family:limelight;
+  padding-top:40px;
+  height:400px;
+  /* Increase the height as needed */
+}
+/* Add this to your styles.css file */
+.content {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  /* Center horizontally */
+    justify-content:center;
+  /* Center vertically */
+    height:100vh;
+  /* Full height of the viewport */
+    text-align:center;
+  /* Center text */
+}
+.pfp {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  /* Center horizontally */
+    margin-top:5px;
+  /* Adjust this value to create space between the navbar and the profile picture */
+}
+.op {
+  border-radius:50%;
+  width:200px;
+  height:200px;
+  float:right;
+  transition:box-shadow 0.3s ease-in-out;
+  /* Smooth transition */
+}
 /* Adjust sections */
 /* Add this to your existing CSS or create a new CSS file */
 .section-divider {
-  border: none;
-  border-top: 1px solid white;
-  margin: 20px 0; /* Adjust the margin as needed */
+  border:none;
+  border-top:1px solid white;
+  margin:20px 0;
+  /* Adjust the margin as needed */
 }
-  .resume-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px; /* Adjust as needed */
-    background-color: #04C3FF;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px; /* Rounded corners */
-    border: none;
-    cursor: pointer;
-  }
+.resume-button {
+  display:inline-block;
+  padding:10px 20px;
+  margin-top:10px;
+  /* Adjust as needed */
+    background-color:#04C3FF;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+  /* Rounded corners */
+    border:none;
+  cursor:pointer;
+}
 /* Testimonial Slider CSS */
 .testimonial-slider {
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #04C3FF #ffffff;
-  white-space: nowrap; /* Prevent wrapping */
-  max-height: 300px; /* Set a maximum height */
-  padding-bottom: 100px; /* Add padding to prevent overlap with scrollbar */
-  margin-right: -80px;
-  margin-left: -30px;
+  display:flex;
+  overflow-x:auto;
+  scrollbar-width:thin;
+  scrollbar-color:#04C3FF #ffffff;
+  white-space:nowrap;
+  /* Prevent wrapping */
+  max-height:300px;
+  /* Set a maximum height */
+  padding-bottom:100px;
+  /* Add padding to prevent overlap with scrollbar */
+  margin-right:-80px;
+  margin-left:-30px;
 }
-
 .testimonial {
-  min-width: 250px;
-  margin-right: 10px; /* Add a 10px gap between cards */
-  margin: 0 10px;
-  padding: 20px;
-  background-color: #04C3FF;
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-overflow: ellipsis;
-  white-space: normal; /* Allow text to wrap */
+  min-width:250px;
+  margin-right:10px;
+  /* Add a 10px gap between cards */
+  margin:0 10px;
+  padding:20px;
+  background-color:#04C3FF;
+  color:white;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  text-overflow:ellipsis;
+  white-space:normal;
+  /* Allow text to wrap */
 }
 .testimonial h5 {
-  margin: 0;
-  margin-top: auto; /* Reset margin for author name */
+  margin:0;
+  margin-top:auto;
+  /* Reset margin for author name */
 }
-
 .star-rating {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
+  list-style:none;
+  padding:0;
+  display:flex;
+  justify-content:flex-start;
 }
-
 .star-rating .star {
-  color: #ffda09;
-  margin-right: 5px;
-  font-size: 30px;
+  color:#ffda09;
+  margin-right:5px;
+  font-size:30px;
 }
-
 /* Default stars (gray) */
 .star-rating .star:nth-child(n + 5) {
-  color: #ccc; /* Default color */
+  color:#ccc;
+  /* Default color */
 }
-
 /* Modern scrollbar CSS */
 .testimonial-slider::-webkit-scrollbar {
-  height: 5px;
+  height:5px;
 }
-
 .testimonial-slider::-webkit-scrollbar-thumb {
-  background-color: #04C3FF;
-  border-radius: 10px;
+  background-color:#04C3FF;
+  border-radius:10px;
 }
-
 .testimonial-slider::-webkit-scrollbar-track {
-  background: #ffffff;
+  background:#ffffff;
 }
 /* Recent Projects Section with Horizontal Scrollbar */
 #recent-projects {
-  padding: 20px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical scrolling */
-  white-space: nowrap; /* Prevent wrapping of project cards */
-  scrollbar-width: thin; /* For modern browsers */
-  scrollbar-color: #04C3FF #ffffff; /* Scrollbar color */
-  height: 500px;
+  padding:20px;
+  overflow-x:auto;
+  /* Enable horizontal scrolling */
+  overflow-y:hidden;
+  /* Hide vertical scrolling */
+  white-space:nowrap;
+  /* Prevent wrapping of project cards */
+  scrollbar-width:thin;
+  /* For modern browsers */
+  scrollbar-color:#04C3FF #ffffff;
+  /* Scrollbar color */
+  height:500px;
 }
 .project-container {
-  margin-left: 30px;
-  display: inline-block;
-  white-space: nowrap;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the project cards horizontally */
-  max-width: 100%; /* Add this line to prevent overflow */
-
+  margin-left:30px;
+  display:inline-block;
+  white-space:nowrap;
+  flex-wrap:wrap;
+  justify-content:center;
+  /* Center the project cards horizontally */
+  max-width:100%;
+  /* Add this line to prevent overflow */
 }
 .project-card {
-  display: inline-block; /* Align cards in a row */
-  width: 250px; /* Adjust width as needed */
-  margin: 0 10px; /* Space between cards */
-  padding: 20px;
-  background-color: #04C3FF; /* Card background color */
-  color: white; /* Text color */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
-  text-align: center; /* Center text */
-  vertical-align: top; /* Align cards at the top */
-  white-space: normal; /* Allow text wrapping inside cards */
-  height: 350px;
+  display:inline-block;
+  /* Align cards in a row */
+  width:250px;
+  /* Adjust width as needed */
+  margin:0 10px;
+  /* Space between cards */
+  padding:20px;
+  background-color:#04C3FF;
+  /* Card background color */
+  color:white;
+  /* Text color */
+  border-radius:10px;
+  /* Rounded corners */
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  /* Box shadow for depth */
+  text-align:center;
+  /* Center text */
+  vertical-align:top;
+  /* Align cards at the top */
+  white-space:normal;
+  /* Allow text wrapping inside cards */
+  height:350px;
 }
-
 .project-image {
-  width: 100%; /* Full width of the card */
-  height: 150px; /* Maintain aspect ratio */
-  border-radius: 5px; /* Rounded corners for images */
+  width:100%;
+  /* Full width of the card */
+  height:150px;
+  /* Maintain aspect ratio */
+  border-radius:5px;
+  /* Rounded corners for images */
 }
-
 .project-button {
-  display: block; /* Full-width button */
-  padding: 10px 20px;
-  background-color: white; /* Button background color */
-  color: #04C3FF; /* Button text color */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px; /* Rounded corners for button */
-  border: none;
-  cursor: pointer;
+  display:block;
+  /* Full-width button */
+  padding:10px 20px;
+  background-color:white;
+  /* Button background color */
+  color:#04C3FF;
+  /* Button text color */
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+  /* Rounded corners for button */
+  border:none;
+  cursor:pointer;
 }
-
 /* Modern scrollbar CSS for Webkit browsers */
 #recent-projects::-webkit-scrollbar {
-  height: 5px;
+  height:5px;
 }
-
 #recent-projects::-webkit-scrollbar-thumb {
-  background-color: #04C3FF;
-  border-radius: 10px;
+  background-color:#04C3FF;
+  border-radius:10px;
 }
-
 #recent-projects::-webkit-scrollbar-track {
-  background: #ffffff;
+  background:#ffffff;
 }
 .iconify {
-  font-size: 50px; /* Adjust the size as needed */
+  font-size:50px;
+  /* Adjust the size as needed */
 }
 /* Style for all navbar links */
 .navbar a {
-  transition: 0.3s;
-  color: #ffffff; /* Replace with your preferred text color */
+  transition:0.3s;
+  color:#ffffff;
+  /* Replace with your preferred text color */
 }
-
 /* Glow effect on hover */
 .navbar a:hover {
-  text-shadow:
-      0 0 5px #04C3FF, /* Custom glow color */
-      0 0 10px #04C3FF,
-      0 0 15px #04C3FF,
-      0 0 20px #04C3FF;
+  text-shadow:0 0 5px #04C3FF,/* Custom glow color */
+      0 0 10px #04C3FF,0 0 15px #04C3FF,0 0 20px #04C3FF;
 }
-
 /* Active glow effect for 'ifeelnj' */
 .navbar a#ifeelnj {
-  animation: glow 1s infinite alternate;
+  animation:glow 1s infinite alternate;
 }
-
 /* Keyframes for active glow animation */
 @keyframes glow {
   from {
-      text-shadow:
-          0 0 5px #04C3FF, /* Custom glow color */
-          0 0 10px #04C3FF,
-          0 0 15px #04C3FF,
-          0 0 20px #04C3FF;
-  }
-  to {
-      text-shadow:
-          0 0 10px #04C3FF, /* Custom glow color */
-          0 0 20px #04C3FF,
-          0 0 30px #04C3FF,
-          0 0 40px #04C3FF;
-  }
+  text-shadow:0 0 5px #04C3FF,/* Custom glow color */
+          0 0 10px #04C3FF,0 0 15px #04C3FF,0 0 20px #04C3FF;
 }
-.circle-imgg:hover {
-  box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF; /* Increase glow intensity */
+to {
+  text-shadow:0 0 10px #04C3FF,/* Custom glow color */
+          0 0 20px #04C3FF,0 0 30px #04C3FF,0 0 40px #04C3FF;
+}
+}.circle-imgg:hover {
+  box-shadow:0 0 20px #04C3FF,0 0 40px #04C3FF,0 0 60px #04C3FF;
+  /* Increase glow intensity */
 }
 .circle-img:hover {
-  box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF; /* Increase glow intensity */
+  box-shadow:0 0 20px #04C3FF,0 0 40px #04C3FF,0 0 60px #04C3FF;
+  /* Increase glow intensity */
 }
 .op:hover {
-  box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF; /* Increase glow intensity */
+  box-shadow:0 0 20px #04C3FF,0 0 40px #04C3FF,0 0 60px #04C3FF;
+  /* Increase glow intensity */
 }
 .circle-img {
-  box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF; /* Increase glow intensity */
+  box-shadow:0 0 20px #04C3FF,0 0 40px #04C3FF,0 0 60px #04C3FF;
+  /* Increase glow intensity */
 }
 /* Define the keyframes for the glowing effect */
 @keyframes glowing {
   0% {
-      box-shadow: 0 0 10px #04C3FF, 0 0 20px #04C3FF, 0 0 30px #04C3FF;
-  }
-  50% {
-      box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF;
-  }
-  100% {
-      box-shadow: 0 0 10px #04C3FF, 0 0 20px #04C3FF, 0 0 30px #04C3FF;
-  }
+  box-shadow:0 0 10px #04C3FF,0 0 20px #04C3FF,0 0 30px #04C3FF;
 }
-
-/* Apply the animation to your .circle-img class */
+50% {
+  box-shadow:0 0 20px #04C3FF,0 0 40px #04C3FF,0 0 60px #04C3FF;
+}
+100% {
+  box-shadow:0 0 10px #04C3FF,0 0 20px #04C3FF,0 0 30px #04C3FF;
+}
+}/* Apply the animation to your .circle-img class */
 .circle-img {
-  animation: glowing 1.5s infinite alternate;
+  animation:glowing 1.5s infinite alternate;
 }
-
-
 button[type="submit"]:active {
-  box-shadow: 0 0 15px #04C3FF; /* Glowing effect */
+  box-shadow:0 0 15px #04C3FF;
+  /* Glowing effect */
 }
 .contact-form {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width:600px;
+  margin:50px auto;
+  padding:20px;
+  background-color:#ffffff;
+  border-radius:8px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
 }
-
 label {
-  display: block;
-  margin-bottom: 5px;
+  display:block;
+  margin-bottom:5px;
 }
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+input[type="text"],input[type="email"],textarea {
+  width:100%;
+  padding:5px;
+  margin-bottom:20px;
+  border:1px solid #ddd;
+  border-radius:4px;
 }
-
 BUTTON[type="submit"] {
-  background-color: #04C3FF;
-  color: rgb(255, 255, 255);
-  width: 70px;
-  height: 40px;
-  margin-right: -2rerm;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
+  background-color:#04C3FF;
+  color:rgb(255,255,255);
+  width:70px;
+  height:40px;
+  margin-right:-2rerm;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
 }
-
 footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: white;
+  text-align:center;
+  padding:20px 0;
+  background-color:#333;
+  color:white;
+}
+footer p {
+  margin:0;
+}
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  /* Adjust styles for small screens */
+  .navbar {
+    /* Example: Change font size or padding */
+    font-size: 14px;
+  }
 }
 
-footer p {
-  margin: 0;
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust styles for medium screens */
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  /* Adjust styles for large screens */
+}
+h1 {
+  font-size: 5vw;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Add media query for small screens */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .navbar a.icon {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar .icon {
+    display: block;
+  }
 }

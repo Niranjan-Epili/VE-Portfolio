@@ -8,16 +8,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 <body>
-<div class="navbar">
+<div class="navbar" id="myNavbar">
   <a href="#introduction" id="ifeelnj" style="font-family: rage; font-size: 25px;">IfeelNj</a>
   <a href="#about">About Me </a>
   <a href="#resume">Resume</a>
   <a href="#recent-projects">Projects</a>
   <a href="#testimonials">Testimonials</a>
   <a href="#contact">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 
 <div id="introduction" class="section video-background">
@@ -68,7 +72,7 @@
     <div>
       <p style="color: white; font-family: magra;">Explore my journey through my resume a visual narrative of my video editing expertise and creative endeavors. Dive into the frames that shape my story! </p>
       <!-- Add a download button or link -->
-      <a href="https://drive.google.com/file/d/1huDxfH7wYDtrYKTFaSJns35xaZuoqCPQ/view?usp=sharing" download class="resume-button" target="_blank">Resume</a>
+      <a href= "https://drive.google.com/file/d/1RCqb2Ujbe-7sCVp3fSC3m8AVAzDQxy2I/view?usp=sharing" download class="resume-button" target="_blank">Resume</a>
     </div>
   </div>
 </div>
@@ -221,6 +225,6 @@
     <footer>
         <p>© 2024-2025 Niranjan Epili. All rights reserved.</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
