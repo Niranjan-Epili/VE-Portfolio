@@ -188,6 +188,32 @@ body {
   height: auto;
   z-index: -1;
 }
+/* Video Container */
+.video-container {
+  position: relative;    /* Establish positioning context */
+  overflow: hidden;     /* Hide video overflow */
+  height: 100vh;        /* Full viewport height */
+}
+
+/* Responsive Video */
+#introVideo {
+  position: absolute;
+  top: 50%;              /* Position 50% from the top */
+  left: 50%;
+  transform: translate(-50%, -55%); /* Center and lift up by 5% */
+  min-width: 100%;       /* Ensure full width */
+  min-height: 100%;      /* Ensure full height */
+  width: auto;          /* Maintain aspect ratio */
+  height: auto;         /* Maintain aspect ratio */
+  object-fit: cover;     /* Cover the container */
+  z-index: -1;           /* Place video behind other content */
+}
+
+/* Content Overlay (Optional) */
+.video-container .content {
+  position: relative;  /* Position on top of the video */
+  z-index: 1;         /* Ensure content is above the video */
+}
 
 /* Content Styles */
 .content {
@@ -278,12 +304,16 @@ body {
 /* Testimonial Slider Styles */
 .testimonial-slider {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: nowrap;    /* Prevent cards from wrapping */
+  overflow-x: auto ;
   scrollbar-width: thin;
   scrollbar-color: #04C3FF #ffffff;
   white-space: nowrap; /* Prevent wrapping */
   max-height: 300px; /* Set a maximum height */
   padding-bottom: 100px; /* Add padding to prevent overlap with scrollbar */
+  scroll-snap-type: x mandatory; /* For smooth scrolling */
+  scrollbar-width: none; /* Hide scrollbar for modern browsers */
+  -ms-overflow-style: none;  /* IE and Edge */
 }
 
 /* Testimonial Card Styles */
@@ -299,6 +329,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   white-space: normal; /* Allow text to wrap */
+  margin-right: -1px;
 }
 
 /* Testimonial Author Name Styles */
