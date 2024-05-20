@@ -112,10 +112,10 @@ body {
 }
 
 /* Circle Image Styles */
-.circle-img {
+.circle-img,.circle-imgg {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin-top: 2px; /* Adjust this value as needed */
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
 }
@@ -149,15 +149,6 @@ body {
       display: block;
       text-align: left;
   }
-}
-
-/* Circle Image Styles */
-.circle-img {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  margin-top: 2px;
-  transition: box-shadow 0.3s ease-in-out;
 }
 
 /* Zig-Zag Layout Styles */
@@ -260,6 +251,10 @@ body {
   border: none;
   cursor: pointer;
 }
+.op {
+  width: 200px;
+  height: 200px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -275,8 +270,8 @@ body {
   }
 
   .op {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -450,13 +445,7 @@ body {
     text-shadow: 0 0 10px #04C3FF, 0 0 20px #04C3FF, 0 0 30px #04C3FF, 0 0 40px #04C3FF; /* Custom glow color */
   }
 }
-.circle-imgg {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  margin-top: 2px; /* Adjust this value as needed */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
-}
+
 /* Glow Effect on Hover for Images */
 .circle-imgg:hover, .circle-img:hover, .op:hover, .circle-img {
   box-shadow: 0 0 20px #04C3FF, 0 0 40px #04C3FF, 0 0 60px #04C3FF; /* Increase glow intensity */
